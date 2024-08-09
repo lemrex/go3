@@ -34,6 +34,7 @@ func helloHandler(w http.ResponseWriter,r *http.Request){
 }
 
 func main(){
+	
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fs)
 	http.HandleFunc("/form", formHandler)
